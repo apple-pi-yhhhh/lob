@@ -1,1 +1,5 @@
-
+let search = document.(search_box).(search_botton)
+fetch('https://ipinfo.io?callback')
+  .then(res => res.json())
+  //.then(json => console.log(json.ip))
+  .then(json => document.write(json.ip))
