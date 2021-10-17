@@ -16,12 +16,14 @@ fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:9784043636037')
   //.then(json => console.log(json.ip))
   .then(json => document.write(json.items))
 */
-
-//検索語句
-var words = 9784043636037;
-// 検索 API を叩く
-var res = await fetch("https://www.googleapis.com/books/v1/volumes?q=isbn:"+words);
-// JSON に変換
-var data = await res.json();
-//表示
-document.write(data);
+asyncCall();
+async function asyncCall() {
+	//検索語句
+	var words = 9784043636037;
+	// 検索 API を叩く
+	var res = await fetch("https://www.googleapis.com/books/v1/volumes?q=isbn:"+words);
+	// JSON に変換
+	var data = await res.json();
+	//表示
+	document.write(data);
+}
