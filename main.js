@@ -24,6 +24,8 @@ async function asyncCall() {
 	var res = await fetch("https://www.googleapis.com/books/v1/volumes?q=isbn:"+words);
 	// JSON に変換
 	var data = await res.json();
+	//jsonをさらにstringify
+	var write = JSON.parse(data)
 	//表示
-	document.write(data);
+	document.write(write);
 }
