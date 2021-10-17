@@ -25,7 +25,7 @@ async function asyncCall() {
 	// JSON に変換
 	var data = await res.json();
 	//jsonをさらにstringify
-	var write = JSON.parse(data)
+	var write = JSON.parse(res)
 	//表示
 	document.write(write);
 }
