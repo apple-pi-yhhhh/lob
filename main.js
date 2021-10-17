@@ -1,7 +1,7 @@
-function search_onButtonClick() {
-	target = document.getElementById("search_result");
-	//target.innerText = document.forms.id_form1.id_textBox1.value;
-	target.innerText = document.id_search.id_search_txt.value;//これでもOK
+function onButtonClick() {
+	target = document.getElementById("output");
+	target.innerText = document.forms.id_form1.id_textBox1.value;
+	//target.innerText = document.id_form1.id_textBox1.value;//これでもOK
 }
 /*
 let search = document.(search_box).(search_botton)
