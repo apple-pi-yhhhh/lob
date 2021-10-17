@@ -4,18 +4,11 @@
 	//target.innerText = document.id_form1.id_textBox1.value;//これでもOK
 }
 */
+
+fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:9784101010137')
+  .then(response => response.json())
+  .then(data => console.log(data));
 /*
-fetch('https://ipinfo.io?callback')
-  .then(res => res.json())
-  //.then(json => console.log(json.ip))
-  .then(json => document.write(json.ip))
-*/
-/*
-fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:9784043636037')
-  .then(res => res.json())
-  //.then(json => console.log(json.ip))
-  .then(json => document.write(json.items))
-*/
 asyncCall();
 async function asyncCall() {
 	//検索語句
@@ -29,3 +22,4 @@ async function asyncCall() {
 	//表示
 	document.write(write);
 }
+*/
