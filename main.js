@@ -8,6 +8,7 @@
 fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:9784101010137')
   .then(response => response.json())
   .then(data => console.log(data));
+  .then(data => document.write(data));
 /*
 asyncCall();
 async function asyncCall() {
