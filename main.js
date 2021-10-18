@@ -1,15 +1,15 @@
-/*function onButtonClick() {
-	target = document.getElementById("output");
-	target.innerText = document.forms.id_form1.id_textBox1.value;
-	//target.innerText = document.id_form1.id_textBox1.value;//これでもOK
-}
-*/
-
+/*
 fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:9784101010137')
   .then(response => response.json())
   .then(data => console.log(data))
   //.then(data => console.log(data.items[0]));
 //document.wite(data.items.0.volumeInfo.title)
+*/
+var data = {
+    "みかん":{"price":"200", "num":"5"},
+    "いちご":{"price":"400", "num":"1"},
+    "ぶどう":{"price":"380", "num":"7"}
+}
 var target = ['title'];
 var result = {};
 for(var key of Object.keys(data)){
@@ -22,18 +22,3 @@ for(var key of Object.keys(data)){
     }
 }
 console.log(result);
-/*
-asyncCall();
-async function asyncCall() {
-	//検索語句
-	var words = 9784043636037;
-	// 検索 API を叩く
-	var res = await fetch("https://www.googleapis.com/books/v1/volumes?q=isbn:"+words);
-	// JSON に変換
-	var data = await res.json();
-	//jsonをさらにstringify
-	var write = JSON.parse(res)
-	//表示
-	document.write(write);
-}
-*/
