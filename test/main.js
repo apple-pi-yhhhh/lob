@@ -22,5 +22,8 @@ function Search() {
 	target.innerHTML = "今、「"+ value +"」って入力したでしょ。";
 	let result;
 	eval("result = all_books.filter(word => word.match(/"+ value +"/g));");
-	console.log(result);
+	let result_num = result.length;
+	for (  var i = 0;  i < result_num;  i++  ) {
+		console.log(result[i]);
+	}
 }
