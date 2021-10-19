@@ -13,7 +13,7 @@ for (  var i = 0;  i < num_books;  i++  ) {
 }
 console.log(all_books);
 
-function OnButtonClick() {
-	target = document.getElementById("test");
-	target.innerHTML = "てすと";
+function Search() {
+	target = document.getElementById("results");
+	target.innerHTML = "ｙｈｈｈｈ";
 }
