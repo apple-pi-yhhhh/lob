@@ -24,6 +24,6 @@ function Search() {
 	eval("result = all_books.filter(word => word.match(/"+ value +"/g));");
 	let result_num = result.length;
 	for (  var i = 0;  i < result_num;  i++  ) {
-		console.log(result[i]);
+		console.log(result[i-1]);
 	}
 }
