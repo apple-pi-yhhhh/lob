@@ -14,6 +14,7 @@ for (  var i = 0;  i < num_books;  i++  ) {
 console.log(all_books);
 
 function Search() {
-	target = document.getElementById("results");
-	target.innerHTML = "ｙｈｈｈｈ";
+	let phrase = document.getElementById("phrase");
+	let target = document.getElementById("results");
+	target.innerHTML = "今、「"+ phrase +"」って入力したでしょ。";
 }
