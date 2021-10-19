@@ -20,6 +20,7 @@ function Search() {
 	let target = document.getElementById("results");
 	let value = phrase.value;
 	target.innerHTML = "今、「"+ value +"」って入力したでしょ。";
-	eval("let result = all_books.filter(word => word.match(/"+ value +"/g));");
+	let result;
+	eval("result = all_books.filter(word => word.match(/"+ value +"/g));");
 	console.log(result);
 }
