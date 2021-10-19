@@ -16,5 +16,6 @@ console.log(all_books);
 function Search() {
 	let phrase = document.getElementById("phrase");
 	let target = document.getElementById("results");
-	target.innerHTML = "今、「"+ phrase +"」って入力したでしょ。";
+	let value = phrase.value;
+	target.innerHTML = "今、「"+ value +"」って入力したでしょ。";
 }
