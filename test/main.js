@@ -19,11 +19,14 @@ function Search() {
 	let phrase = document.getElementById("phrase");
 	let target = document.getElementById("results");
 	let value = phrase.value;
+	//入力された文字列
 	target.innerHTML = "今、「"+ value +"」って入力したでしょ。";
-	let result;
-	eval("result = all_books.filter(word => word.match(/"+ value +"/g));");
-	let result_num = result.length;
-	for (  var i = 0;  i < result_num;  i++  ) {
-		console.log(result[i-1]);
-	}
+
+    regexp = new RegExp(value + '(.*?)', 'g'),
+    // 正規表現オブジェクト ここでは正規表現も文字列で記載する
+
+    matchArr = all_books.match(regexp);
+    // 検索対象から正規表現にマッチするものを抽出して、返す
+
+console.log(matchArr);
 }
