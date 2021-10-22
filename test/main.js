@@ -7,10 +7,12 @@ for (  var i = 0;  i < num_books;  i++  ) {
 	.then (data => {
    		console.log(i +"つ目の本は「"+ data.items[0].volumeInfo.title +"」です。")
 		all.push(data.items[0].volumeInfo.titl);
+		
+		let all_book_category = document.getElementById("all");
+		all_book_category.innerHTML = data.items[0].volumeInfo.title;
 		//console.log(data);
    		//console.log(data.items[0].volumeInfo.title);
 	});
-	
 	//console.log(i);
 }
 console.log(all_books);
