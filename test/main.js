@@ -1,19 +1,21 @@
 let num_books = all_books.length;
 let all = [];
+let n = 0;
 for (  var i = 0;  i < num_books;  i++  ) {
 	
-	fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:'+ all_books[i])
+	fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:'+ all_books[n])
 	.then(response => response.json())
 	.then (data => {
-   		console.log(i +"つ目の本は「"+ data.items[0].volumeInfo.title +"」です。")
+   		console.log(n +"つ目の本は「"+ data.items[0].volumeInfo.title +"」です。")
 		all.push(data.items[0].volumeInfo.titl);
 		
-		let all_book_category = document.getElementById("all");
+		let all_book_category = document.getElementById("all"+ n);
 		all_book_category.innerHTML = data.items[0].volumeInfo.title;
 		//console.log(data);
    		//console.log(data.items[0].volumeInfo.title);
 	});
 	//console.log(i);
+	n = n + 1;
 }
 console.log(all_books);
 
