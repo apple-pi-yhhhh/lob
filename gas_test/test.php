@@ -22,3 +22,37 @@ if(isset($_POST['address'])){
 	curl_close($ch);
 }
 ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<form action="#" method="post" id="form" name="form">
+		<dl>
+			<dt>都道府県（プルダウン）</dt>
+			<dd><select name="address" id="">
+				<option value="北海道">北海道</option>
+				<option value="東北">東北</option>
+				<option value="関東">関東</option>
+				<option value="関西">関西</option>
+				<option value="四国">四国</option>
+				<option value="九州">九州</option>
+				<option value="沖縄">沖縄</option>
+			</select></dd>
+			<dt>個人or法人（ラジオボタン）</dt>
+			<dd>
+				<input type="radio" name="kind" value="個人"> 個人<br>
+				<input type="radio" name="kind" value="法人"> 法人
+			</dd>
+			<dt>業種（テキスト）</dt>
+			<dd>
+				<input type="text" name="job">
+			</dd>
+		</dl>
+		<input type="submit" value="送信">
+	</form>
+</body>
+</html>
