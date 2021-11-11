@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta charset="UTF-8" />
+  <title>テストフォームだよ</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ </head>
+ <script>
+ <!--
+  function validateForm(){
+   if(document.getElementById("name_input").value==""){
+    alert("なんか書いてくださいよ！");
+    return false;
+   }else{
+    document.getElementById("formID").submit();
+    document.getElementById("thankyou").style.display="";
+    document.getElementById("thankyou").innerHTML="<center>ありがとう</center>";
+    document.getElementById("thanks_none").style.display="none";
+   }
+  }
+ -->
+ </script>
+ <body>
+  <div style="display:none;" id="thankyou"></div>
+  <iframe src="#" id="fake-target" name="fake-target" style="width:0px; height:0px; border:0px;"></iframe>
+  <div id="thanks_none">
+   <form id="formID" action="【要変更】現在のウェブ アプリケーションの URL" method="post" target="fake-target">
+    ご氏名<input id="name_input" name="name" type="text" style="ime-mode:active"/><br />
+    メール<input name="mail" type="text" style="ime-mode:inactive"/>
+    <button onClick="javascript:validateForm();">送信</button>
+   </form>
+  </div>
+ </body>
+</html>
