@@ -14,7 +14,7 @@
    }else{
     document.getElementById("formID").submit();
     document.getElementById("thankyou").style.display="";
-    document.getElementById("thankyou").innerHTML="<center>ありがとう</center>";
+    document.getElementById("thankyou").innerHTML='<meta http-equiv="Refresh" content="3; url="https://www.yahoo.co.jp/"></meta><h1>３秒後に前のページに戻ります</h1>';
     document.getElementById("thanks_none").style.display="none";
    }
   }
@@ -24,7 +24,7 @@
   <div style="display:none;" id="thankyou"></div>
   <iframe src="#" id="fake-target" name="fake-target" style="width:0px; height:0px; border:0px;"></iframe>
   <div id="thanks_none">
-   <form id="formID" action="https://script.google.com/macros/s/AKfycbx0Og2WnqT-bOCxeBz_xeRYjXcTKtTeaiP8KSAQMEBL3y2E0S8WsJDdM7tEKDA06LieJg/exec" method="post" target="fake-target">
+   <form id="formID" action="https://script.google.com/macros/s/AKfycbzWzGkEMFOAuQGSVNKvOO-enAVLrxRjSVjVjtVYYyyHznJ6Ug1TnCPAM-sKreRv6SVjSQ/exec" method="post" target="fake-target">
     ご氏名<input id="name_input" name="name" type="text" style="ime-mode:active"/><br />
     メール<input name="mail" type="text" style="ime-mode:inactive"/>
     <button onClick="javascript:validateForm();">送信</button>
