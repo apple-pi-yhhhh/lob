@@ -26,14 +26,9 @@
   <iframe src="#" id="fake-target" name="fake-target" style="width:0px; height:0px; border:0px;"></iframe>
   <div id="thanks_none">
    <form id="formID" action="https://script.google.com/macros/s/AKfycbzWzGkEMFOAuQGSVNKvOO-enAVLrxRjSVjVjtVYYyyHznJ6Ug1TnCPAM-sKreRv6SVjSQ/exec" method="post" target="fake-target">
-    名前<input id="name_input" name="name" type="text" style="ime-mode:active"/><br />
-    その他<input name="example" type="text" style="ime-mode:inactive"/>
-				<script name="ip">
-    fetch('https://ipinfo.io?callback')
-					.then(res => res.json())
-					.then(json	 => document.write(json.ip));
-					</script>
-				<button onClick="javascript:validateForm();">送信</button>
+	   名前<input id="name_input" name="name" type="text" style="ime-mode:active"/><br />
+	   その他<input name="example" type="text" style="ime-mode:inactive"/>
+	<button onClick="javascript:validateForm();">送信</button>
    </form>
   </div>
  </body>
