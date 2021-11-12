@@ -6,7 +6,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
  </head>
  <script>
- <!--
   function validateForm(){
    if(document.getElementById("name_input").value==""){
     alert("なんか書いてくださいよ！");
@@ -14,11 +13,13 @@
    }else{
     document.getElementById("formID").submit();
     document.getElementById("thankyou").style.display="";
-    document.getElementById("thankyou").innerHTML='<meta http-equiv="Refresh" content="3; url="https://www.yahoo.co.jp/"></meta><h1>３秒後に前のページに戻ります</h1>';
+    document.getElementById("thankyou").innerHTML='<meta http-equiv="Refresh" content="3; url="https://www.topi.cf/lob/from/"></meta><h1>３秒後に前のページに戻ります</h1>';
     document.getElementById("thanks_none").style.display="none";
+    xhr = new XMLHttpRequest();
+    let request = "例えば"
+    xhr.send(request);
    }
   }
- -->
  </script>
  <body>
   <div style="display:none;" id="thankyou"></div>
