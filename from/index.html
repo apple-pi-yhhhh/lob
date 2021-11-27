@@ -5,31 +5,11 @@
   <title>テストフォームだよ</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
  </head>
- <script>
-  function validateForm(){
-   if(document.getElementById("name_input").value==""){
-    alert("なんか書いてくださいよ！");
-    return false;
-   }else{
-    document.getElementById("formID").submit();
-    document.getElementById("thankyou").style.display="";
-    document.getElementById("thankyou").innerHTML='<meta http-equiv="Refresh" content="3; url="https://www.topi.cf/lob/from/"></meta><h1>３秒後に前のページに戻ります</h1>';
-    document.getElementById("thanks_none").style.display="none";
-    xhr = new XMLHttpRequest();
-    let request = "例えば"
-    xhr.send(request);
-   }
-  }
- </script>
  <body>
-  <div style="display:none;" id="thankyou"></div>
-  <iframe src="#" id="fake-target" name="fake-target" style="width:0px; height:0px; border:0px;"></iframe>
-  <div id="thanks_none">
    <form id="formID" action="https://script.google.com/macros/s/AKfycbxlIb7znu94fX6nY1f3Aqq-yubiTu1yu2dKAy-wjjtGSsoUe58WXifeFGOD41AB291qGA/exec" method="post" target="fake-target">
 	   名前<input id="name_input" name="name" type="text" style="ime-mode:active"/><br />
 	   その他<input name="example" type="text" style="ime-mode:inactive"/>
-	<button onClick="javascript:validateForm();">送信</button>
+	<button onClick="submit">送信</button>
    </form>
-  </div>
  </body>
 </html>
