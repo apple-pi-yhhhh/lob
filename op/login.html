@@ -2,10 +2,19 @@
   <script>
     let cookies = document.cookie.split('; ');
     console.log(cookies.length);
-    let textbox = document.getElementById("message").value
+    function login(){
+      let mail = document.getElementById("e-mail").value
+      let pass = document.getElementById("pass").value
+      cookie("mail",mail);
+      cookie("pass",pass);
+    }
+    function cookie(key,value){
+      document.cookie = key+"="+value;
+    }
   </script>
 </head>
 <body>
   <input type="text" id="e-mail">@jhs.gs.chiba-u.jp
-  <input type="text" id="pass">
+  <input type="password" id="pass">
+  <input type="button" value="ログイン" onclick="login()">
 </body>
