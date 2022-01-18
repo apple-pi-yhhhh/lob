@@ -2,11 +2,19 @@
   <script>
     let cookies = document.cookie.split('; ');
     console.log(cookies.length);
+    
     function login(){
-      let mail = document.getElementById("e-mail").value
-      let pass = document.getElementById("pass").value
-      cookie("mail",mail);
-      cookie("pass",pass);
+      cookie("mail",document.getElementById("e-mail").value);
+      cookie("pass",document.getElementById("pass").value);
+      cookie("time","123456")
+          const youbi = ["日","月","火","水","木","金","土"];
+	const date1 = new Date();
+	const date2 = date1.getFullYear() + "年" + 
+				(date1.getMonth() + 1)  + "月" + 
+				date1.getDate() + "日" + 
+				date1.getHours() + "時" + 
+				date1.getMinutes() + "分" + 
+	console.log(date2);
     }
     function cookie(key,value){
       document.cookie = key+"="+value;
@@ -15,6 +23,7 @@
 </head>
 <body>
   <input type="text" id="e-mail">@jhs.gs.chiba-u.jp
+  <br>
   <input type="password" id="pass">
   <input type="button" value="ログイン" onclick="login()">
 </body>
