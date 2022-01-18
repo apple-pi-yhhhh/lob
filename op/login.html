@@ -7,14 +7,15 @@
     function login(){
       cookie("mail",document.getElementById("e-mail").value);
       cookie("pass",document.getElementById("pass").value);
-      let date = new Date()
+      let date = new Date();
       let time =
 	date.getFullYear() * 365 * 24 * 60
       	+ (date.getMonth() + 1) * 30 * 24 * 60
       	+ date.getDate() * 24 * 60
       	+ date.getHours() * 60
-      	+ date.getMinutes()
-      cookie("time",time)
+      	+ date.getMinutes();
+      cookie("time",time);
+      cookie("last",location.herf);
     }
     function cookie(key,value){
       document.cookie = key+"="+value;
