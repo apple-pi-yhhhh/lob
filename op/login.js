@@ -1,8 +1,8 @@
 function cookie_get(cookies){
   let cookie_arr = document.cookie.split('; ');
-  for (let i = 0; i < cookies.length; i++) {
-    cookie_arr[i].sprit("=");
-    cookies[cookie_arr[i][0]] = cookie_arr[i][1]
+  for (let i = 0; i < cookie_arr.length; i++) {
+    var coc = cookie_arr[i].split("=");
+    cookies[coc[0]] = coc[1]
   }
 }
 function login() {
