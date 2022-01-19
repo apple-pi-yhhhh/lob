@@ -17,3 +17,44 @@ function login() {
 function cookie_make(key, value) {
   document.cookie = key + "=" + value;
 }
+
+function user_show(){
+  let html1 = [
+    '<div id="user_show">',
+    'メールアドレス：<p><input type="text" id="e-mail">@jhs.gs.chiba-u.jp</p><br>',
+    'パスワード：<p><input type="password" id="pass"></p><br>',
+    '<input type="button" value="ログイン" onclick="login()">',
+    '<div>'
+  ]
+  let html2 = [
+    '<div id="user_show">',
+    'メールアドレス：<p><input type="text" id="e-mail">@jhs.gs.chiba-u.jp</p><br>',
+    'パスワード：<p><input type="password" id="pass"></p><br>',
+    '<input type="button" value="ログイン" onclick="login()">',
+    '<div>'
+  ]
+  let element = document.getElementById('user_show');
+  element.remove();
+  
+  let element = document.getElementById('main');
+  
+  for (let i = 0; i < n; i++) {
+    element.insertAdjacentHTML('beforeend', n[i]);
+  }
+  
+  
+  /*
+  beforebegin	指定した要素の直前に挿入する
+  afterbegin	指定した要素内にある最初の子要素の前に挿入する
+  beforeend	指定した要素内にある最後の子要素の後に挿入する
+  afterend	指定した要素の直後に挿入する
+  
+  <!-- beforebegin -->
+  <div>
+  <!-- afterbegin -->
+  intotheprogram
+  <!-- beforeend -->
+  </div>
+  <!-- afterend -->
+  */
+}
