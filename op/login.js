@@ -6,12 +6,17 @@ function cookie_get(cookies){
   }
 }
 function login() {
-  cookie_make("mail", document.getElementById("e-mail").value);
-  cookie_make("pass", document.getElementById("pass").value);
+  var mail = document.getElementById("e-mail").value;
+  var pass = document.getElementById("pass").value;
+  cookie_make("mail", mail);
+  cookie_make("pass", pass);
   let date = new Date();
   let time = date.getFullYear() * 365 * 24 * 60 + (date.getMonth() + 1) * 30 * 24 * 60 + date.getDate() * 24 * 60 + date.getHours() * 60 + date.getMinutes();
   cookie_make("time", time);
   cookie_make("last", location.herf);
+  var res = await fetch('https://script.google.com/a/macros/jhs.gs.chiba-u.jp/s/AKfycbz1sd50SIGMPlT-qChyVlIvF-qJBV4Kqhnp188vatpHlmhKCuKnB4gMsAyWe885dvSXSg/exec?m='+mail+';p='+pass);
+  var data = await res.json();
+  document.write("<h1>" + data.a + "</h1>"); 
 }
 
 function cookie_make(key, value) {
@@ -19,45 +24,14 @@ function cookie_make(key, value) {
 }
 
 function user_show(){
-  let html1 = [
-    '<div id="user_show">',
-    'メールアドレス：<p><input type="text" id="e-mail">@jhs.gs.chiba-u.jp</p><br>',
-    'パスワード：<p><input type="password" id="pass"></p><br>',
-    '<input type="button" value="ログイン" onclick="login()">',
-    '<div>'
-  ]
-  let html2 = [
-    '<div id="user_show">',
-    '<p>こんにちは</p>',
-    '<div>'
-  ]
-  let element = document.getElementById('user_show');
-  element.remove();
   let cookie = {};
   cookie_get(cookie);
   let date = new Date();
   let time = date.getFullYear() * 365 * 24 * 60 + (date.getMonth() + 1) * 30 * 24 * 60 + date.getDate() * 24 * 60 + date.getHours() * 60 + date.getMinutes();
-  if (time - cookie[time] > 30){
-    var n = html1;
-  }else{
-    var n = html2;
+  if ((time-cookie.time) > 30){
   }
-  let element = document.getElementById('main');
-  for (let i = 0; i < n.length; i++) {
-    element.insertAdjacentHTML('beforeend', n[i]);
-  }
-  /*
-  beforebegin	指定した要素の直前に挿入する
-  afterbegin	指定した要素内にある最初の子要素の前に挿入する
-  beforeend	指定した要素内にある最後の子要素の後に挿入する
-  afterend	指定した要素の直後に挿入する
-  
-  <!-- beforebegin -->
-  <div>
-  <!-- afterbegin -->
-  intotheprogram
-  <!-- beforeend -->
-  </div>
-  <!-- afterend -->
-  */
 }
+
+var res = await fetch('https://script.google.com/a/macros/jhs.gs.chiba-u.jp/s/AKfycbz1sd50SIGMPlT-qChyVlIvF-qJBV4Kqhnp188vatpHlmhKCuKnB4gMsAyWe885dvSXSg/exec?m=');
+var data = await res.json();
+document.write("<h1>" + data.items[0].volumeInfo.title + "</h1>"); 
