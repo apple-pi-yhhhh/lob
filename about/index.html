@@ -14,13 +14,16 @@
     <script src="/lob/js/script.js"></script>
 </head>
 <body>
-	<iframe src="/lob/frames/header.html" width="100%" scrolling="no" id="header" onload="outo_high_iframe()"></iframe>
+	<iframe src="/lob/frames/header.html" width="100%"></iframe>
 	<script>
-		const sub = document.getElementById("header");
-		function outo_high_iframe() {
-			sub.style.width = sub.contentWindow.document.body.scrollWidth + "px";
-			sub.style.height = sub.contentWindow.document.body.scrollHeight + "px";
-		}
+		$("iframe").on("load", function(){
+			try {
+					$(this).height(0);
+					$(this).height(this.contentWindow.document.documentElement.scrollHeight);
+				} catch (e) {
+				}
+			});
+		$("iframe").trigger("load");
 	</script>
     <div id="wrapper">
         <div id="mainBanner">
