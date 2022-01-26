@@ -23,7 +23,9 @@
 				} catch (e) {
 				}
 			});
-		$("iframe").trigger("load");
+		while (true) {
+			$("iframe").trigger("load");
+		}
 	</script>
     <div id="wrapper">
         <div id="mainBanner">
