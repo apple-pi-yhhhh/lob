@@ -14,7 +14,14 @@
     <script src="/lob/js/script.js"></script>
 </head>
 <body>
-	<iframe src="/lob/frames/header.html" width="100%" scrolling="no"></iframe>
+	<iframe src="/lob/frames/header.html" width="100%" scrolling="no" id="header" onload="outo_high_iframe()"></iframe>
+	<script>
+		const sub = document.getElementById("header");
+		function outo_high_iframe() {
+			sub.style.width = sub.contentWindow.document.body.scrollWidth + "px";
+			sub.style.height = sub.contentWindow.document.body.scrollHeight + "px";
+		}
+	</script>
     <div id="wrapper">
         <div id="mainBanner">
             <img src="/lob/images/mainImg.jpg" alt="" width="960">
