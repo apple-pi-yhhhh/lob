@@ -15,18 +15,6 @@
 </head>
 <body>
 	<iframe src="/lob/frames/header.html" width="100%"></iframe>
-	<script>
-		while (true) {
-		$("iframe").on("load", function(){
-			try {
-					$(this).height(0);
-					$(this).height(this.contentWindow.document.documentElement.scrollHeight);
-				} catch (e) {
-				}
-			});
-		$("iframe").trigger("load");
-		}
-	</script>
     <div id="wrapper">
         <div id="mainBanner">
             <img src="/lob/images/mainImg.jpg" alt="" width="960">
