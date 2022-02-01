@@ -123,6 +123,7 @@ window.addEventListener('load', function(event) {
             //ここに処理(?)
             var isbn = result.codeResult.code;
             var title = get_books_title(isbn);
+            window.location = "https://www.topi.cf/lob/op/";
 
             console.log(result.codeResult.code);
             jan.value += result.codeResult.code + '\n';
